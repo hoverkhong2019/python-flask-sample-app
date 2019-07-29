@@ -8,7 +8,6 @@
     :copyright: © 2010 by the Pallets team.
     :license: BSD, see LICENSE for more details.
 """
-# a comment to test codefresh
 
 import os
 import tempfile
@@ -67,7 +66,7 @@ def add_message(client, text):
     rv = client.post('/add_message', data={'text': text},
                      follow_redirects=True)
     if text:
-        assert b'Your message was recorded foobar to cause test to fail' in rv.data
+        assert b'Your message was recorded' in rv.data
     return rv
 
 
