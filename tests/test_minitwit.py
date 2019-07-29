@@ -67,7 +67,7 @@ def add_message(client, text):
     rv = client.post('/add_message', data={'text': text},
                      follow_redirects=True)
     if text:
-        assert b'Your message was recorded' in rv.data
+        assert b'Your message was recorded foobar to cause test to fail' in rv.data
     return rv
 
 
